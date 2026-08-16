@@ -1,7 +1,6 @@
 import torch
 from diffusers import StableDiffusionPipeline
 
-# Pre-trained Stable Diffusion model
 model_id = "runwayml/stable-diffusion-v1-5"
 
 # Automatically select GPU if available
@@ -29,7 +28,6 @@ image = pipe(
     num_inference_steps=20
 ).images[0]
 
-# Save output
 image.save("generated_image.png")
 
 print("Image generated successfully!")
